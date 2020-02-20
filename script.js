@@ -26,9 +26,8 @@ function Calcular(e){
     var textors = ['Valor em 1x R$: ','Valor em 2x R$: ','Valor em 3x R$: ','Valor em 4x R$: ','Valor em 5x R$: ','Valor em 6x R$: ','Valor em 7x R$: ','Valor em 8x R$: ','Valor em 9x R$: ','Valor em 10x R$: ','Valor em 11x R$: ','Valor em 12x R$: '];
     var resultadosdivididos =[r1,r2/2,r3/3,r4/4,r4/5,r6/6,r7/7,r8/8,r9/9,r10/10,r11/11,r12/12];
     var textors2 = ['    1x de R$: ','    2x de R$: ','  3x de R$: ','   4x de R$: ','   5x de R$: ','   6x de R$: ','   7x de R$: ','   8x de R$: ','   9x de R$: ','   10x de R$: ','  11x de R$: ','  12x de R$: '];
-    i=0;
-    while (i<12){
-        i++;
+    
+    for(let i = 0; i <= 11; i++){
         var node = document.createElement("LI");
         var textnode = document.createTextNode (textors[i]);
         var rsnode = document.createTextNode(parseFloat(resultados[i].toFixed(2)));
@@ -40,8 +39,8 @@ function Calcular(e){
         node.appendChild (textnode2);
         node.appendChild (rsnode2);
         document.getElementById("Lista").appendChild(node);
-
         
+    
     };
 
 };
