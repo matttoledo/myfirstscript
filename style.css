@@ -17,7 +17,7 @@
     display: grid;
     grid-gap: 1em;
     padding: 1em;
-    max-width: 40ch;
+    max-width: 50ch;
   }
   
   input {
