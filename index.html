@@ -1,78 +1,23 @@
-<html>
-    <head>
-        <style>
+<!DOCTYPE html>
+<html lang=en>
     
-
-div {
-    font-family: bold Arial, Helvetica, sans-serif;
-}
-
-ul {
-    padding: 20px;
-}
-
-ul li {
-    font: bold 12px Helvetica, serif;
-    background: #cce5ff;
-     margin: 5px;
-}
-        </style>
+    <head>
         <meta charset="UTF-8">
-        <title>Calculadoras de Juros</title>
+        <title>Calculadora Juros</title>
+        <link href="./style.css" rel="stylesheet">
+
       </head>
     <body>
-        <div>
-            <h1>Calculadora de Juros</h1>
+        <script src="./script.js" defer></script>
+        <form>
+            <h1>Calculadora Juros</h1>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">    
             <input type="text" placeholder= "Insira o valor a ser calculado" id="input">
             <button>Calcular</button>
             <ul id ='Lista'>
-
-            </ul>    
-            </div>
-        <script>
-            var inputElement = document.getElementById('input');
-            var buttonElement = document.querySelector('button');
-            var listElement = document.querySelector('ul'); 
-            
-            function Calcular(){
-            listElement.innerHTML ='';
-    
-            var valor, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12;
-            valor = document.getElementById('input').value;
-
-                
-            r1 = valor/(1-0.0494);
-            r2 = valor/(1-0.0605);
-            r3 = valor/(1-0.0684);
-            r4 = valor/(1-0.0763);
-            r5 = valor/(1-0.0843);
-            r6 = valor/(1-0.0923);
-            r7 = valor/(1-0.1014);
-            r8 = valor/(1-0.1095);
-            r9 = valor/(1-0.1176);
-            r10 = valor/(1-0.1258);
-            r11 = valor/(1-0.1340);
-            r12 = valor/(1-0.1422);
-
-            var resultados = [r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12];
-            var textors = ['Valor em 1x R$: ','Valor em 2x R$: ','Valor em 3x R$: ','Valor em 4x R$: ','Valor em 5x R$: ','Valor em 6x R$: ','Valor em 7x R$: ','Valor em 8x R$: ','Valor em 9x R$: ','Valor em 10x R$: ','Valor em 11x R$: ','Valor em 12x R$: '];
-            
-            for (i=0;i<12;i++){
-            var node = document.createElement("LI");
-            var rsnode = document.createTextNode (textors[i]);
-            var textnode = document.createTextNode(parseFloat(resultados[i].toFixed(2)));	
-            
-            node.appendChild (rsnode);   
-            node.appendChild(textnode);
-            document.getElementById("Lista").appendChild(node);
-            }
-
-            }
-            
-            buttonElement.onclick = Calcular;
-
-            
-            
-       </script>
+            </ul>
+            </form>    
+        
      </body>    
 </html>
