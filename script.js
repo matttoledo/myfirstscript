@@ -2,10 +2,11 @@ var inputElement = document.getElementById('input');
 var buttonElement = document.querySelector('button');
 var listElement = document.querySelector('ul'); 
 
-function Calcular(){
+function Calcular(e){
+    e.preventDefault();
     listElement.innerHTML ='';
     //var  valor, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12;
-    var valor;
+    //var valor;
     valor = document.getElementById('input').value;
     
     r1 = valor/(1-0.0494);
@@ -30,8 +31,8 @@ function Calcular(){
         i++;
         var node = document.createElement("LI");
         var textnode = document.createTextNode (textors[i]);
-        var rsnode = document.createTextNode(parseFloat(resultados[i]));
-        var rsnode2 = document.createTextNode(parseFloat(resultadosdivididos[i]));
+        var rsnode = document.createTextNode(parseFloat(resultados[i].toFixed(2)));
+        var rsnode2 = document.createTextNode(parseFloat(resultadosdivididos[i].toFixed(2)));
         var textnode2 = document.createTextNode(textors2[i]);
 
         node.appendChild (textnode);   
