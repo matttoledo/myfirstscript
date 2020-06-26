@@ -10,7 +10,7 @@ function Calcular(e){
     valor = document.getElementById('input').value;
     
     /*Criei um vetor para juros pois ele será o parâmetro de quantas parcelas teremos. O código está estruturado para atender a largura do vetor juros e assim, calcular a quantidade de parcelas.*/ 
-    var juros = [0.0494, 0.0605, 0.0684, 0.0763, 0.0843, 0.0923, 0.1014, 0.1095, 0.1176, 0.1258, 0.1340, 0.1422];
+    var juros = [0.03795, 0.04962, 0.05640, 0.0631, 0.06975, 0.07634, 0.08815, 0.09457, 0.10093, 0.10723, 0.11348, 0.11966, 0.12760, 0.13365, 0.13965, 0.14559, 0.15148, 0.15731];
     
     /*Vetor que guardará os valores com os juros.*/ 
     var resultados = new Array();
